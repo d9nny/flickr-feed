@@ -1,0 +1,82 @@
+@import '../../../../styles/variables.less';
+
+.post-container {
+    padding: .5rem .75rem;
+    border-bottom: 1px solid @grey-0;
+
+    .image-container {
+        .post-image {
+            height: 180px;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+
+            @media (max-width: 800px) {
+                height: 130px;
+            }
+
+            @media (max-width: 576px) {
+                height: 95px;
+            }
+        }
+    }
+
+    .detail-container {
+        padding: .5rem;
+        padding-left: 2rem;
+
+        .date {
+            display: block;
+        }
+
+        .title {
+            font-size: 1.6rem;
+        }
+
+        .info-container {
+            > a, > span {
+                padding-right: 1rem;
+            }
+
+            .inline-date {
+                display: none;
+            }
+        }
+
+        .highlight {
+            color: @heading-color;
+        }
+
+        @media (min-width: 800px) {
+            .date {
+                display: none;
+            }
+            .info-container {
+                .inline-date {
+                    display: inline-block;
+                }
+            }
+        }
+
+        @media (max-width: 800px) {
+            .title {
+                margin-bottom: .75rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            font-size: .8rem;
+            padding-left: 1rem;
+
+            .title {
+                margin-bottom: .5rem;
+            }
+
+            .info-container {
+                a, span {
+                    padding-right: 2rem;
+                }
+            }
+        }
+    }
+}

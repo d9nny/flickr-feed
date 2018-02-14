@@ -1,0 +1,40 @@
+<section class="section container justify-content-center"
+         id="post-section">
+
+        <div class="row title-container">
+            <div class="col-12">
+                <div class="vertical-align hidden-md-up">
+                    <a class="btn btn-primary float-right ml-auto"
+                       id="back-btn"
+                       routerLink="">
+                        <i class="fa fa-arrow-left"></i>Back</a>
+                </div>
+                <a class="btn btn-secondary float-right ml-auto hidden-md-down"
+                       id="back-btn"
+                       routerLink="">
+                        <i class="fa fa-arrow-left"></i>Back</a>
+                <h1 class="title">
+                    <a href="{{ post.link }}">{{ post.title }}</a></h1>
+                <h5 class="sub-title">
+                    <a href="https://www.flickr.com/people/{{ post.author_id }}">{{ post.authorName }}</a> | <span class="date">Published: <span class="highlight">{{ post.published | date:'dd MMM yyyy' }}</span> at <span class="highlight">{{ post.published | date:'shortTime' }}</span></span>
+                </h5>
+            </div>
+        </div>
+
+        <div class="row post-container">
+            <div class="col-12 col-md-3">
+                <img src="{{ post.media.m }}">
+            </div>
+            <div class="col-12 col-md-9">
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu justo tristique, molestie lacus at, posuere nisi. Aliquam vehicula erat eget pretium rhoncus. Proin sed fringilla arcu. In ullamcorper scelerisque accumsan. Donec dapibus neque tempus, volutpat erat at, molestie tellus. Quisque quis nunc nulla. Ut in dignissim est, non gravida est.<br/><br/>Integer mollis leo eu pellentesque convallis. Curabitur ac diam quis mi commodo efficitur vitae sit amet ex. Quisque vel convallis metus. Aliquam erat volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent dui est, ultricies id varius at, lacinia nec sapien. In id aliquet turpis. Praesent in porta dolor. Fusce in mollis nunc.</p>
+                <table class="tag-table">
+                    <tr>
+                        <td>Tags:</td>
+                        <td><span class="tag"
+                                  *ngFor="let tag of post.tags.split(' ')">
+                            <a href="?tag={{ tag }}">{{ tag }}</a></span>
+                        </td>
+                </table>
+            </div>
+        </div>
+</section>
