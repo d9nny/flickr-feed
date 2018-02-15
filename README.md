@@ -15,6 +15,7 @@ Run `npm run start-fe` to start the front end. Navigate to `http://localhost:420
 Run `npm run start-be` to start the back end.
 
 Run `nmp run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
 <!--
 ## Build
 
