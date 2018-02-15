@@ -15,7 +15,8 @@
     <div class="container justify-content-center feed-container">
         <div class="row">
             <div class="col-12"
-                 *ngFor="let post of posts | tagSearchPipe: searchQuery">
+                 *ngFor="let post of posts | tagSearchPipe: searchQuery"
+                 [@fadeIn]="post.state">
                 <app-public-feed-item [post]="post"></app-public-feed-item>
             </div>
         </div>

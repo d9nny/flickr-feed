@@ -26,6 +26,7 @@ export class FlickrService {
                                response.data.items.forEach(post => {
                                    post.authorName = this.getAuthorName(post.author);
                                    post.id = this.getId(post.link);
+                                   post.state = 'hidden';
                                });
                                return this.response = response.data.items;
                            } else {

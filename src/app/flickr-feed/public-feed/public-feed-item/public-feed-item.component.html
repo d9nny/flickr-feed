@@ -6,12 +6,16 @@
         </a>
     </div>
     <div class="col-9 detail-container">
-        <h3 class="title">
-            <a routerLink="/posts/{{ post.id }}">{{ post.title }}</a></h3>
+        <h4 class="title">
+            <a routerLink="/posts/{{ post.id }}">{{ post.title }}</a>
+        </h4>
+
         <span class="date">Published: <span class="highlight">{{ post.published | date:'dd MMM yyyy' }}</span> at <span class="highlight">{{ post.published | date:'shortTime' }}</span></span>
+
         <div class="info-container vertical-align">
             <a href="https://www.flickr.com/people/{{ post.author_id }}">{{ post.authorName }}</a>
             <span class="inline-date">Published: <span class="highlight">{{ post.published | date:'dd MMM yyyy' }}</span> at <span class="highlight">{{ post.published | date:'shortTime' }}</span></span>
+            <br class="hide-md-up"/>
             <a class="link-primary"
                href="{{ post.link }}">View on flickr</a>
         </div>

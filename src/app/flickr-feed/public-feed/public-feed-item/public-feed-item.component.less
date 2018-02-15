@@ -1,15 +1,17 @@
 @import '../../../../styles/variables.less';
 
 .post-container {
-    padding: .5rem .75rem;
-    border-bottom: 1px solid @grey-0;
+    padding: 1rem;
+    background-color: white;
+    margin-bottom: .5rem;
+    border-radius: @border-radius;
 
     .image-container {
         .post-image {
-            height: 180px;
+            height: 160px;
             background-position: center;
             background-size: cover;
-            width: 100%;
+            width: 90%;
 
             @media (max-width: 800px) {
                 height: 130px;
@@ -23,7 +25,6 @@
 
     .detail-container {
         padding: .5rem;
-        padding-left: 2rem;
 
         .date {
             display: block;
